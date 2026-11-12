@@ -1,0 +1,14 @@
+# Publish reusable tools and documentation only. Live reports/config stay local.
+*
+!.gitignore
+!worker-entry.js
+!wrangler.example.toml
+!wrangler.preflight.toml
+!diagnose-cloudflare.py
+!scan-secrets.py
+!smoke-test.mjs
+!GUIDE.md
+!TROUBLESHOOTING.md
+!CHANGES.md
+!ROADMAP.md
+!TESTING.md

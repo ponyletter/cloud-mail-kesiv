@@ -1,3 +1,21 @@
+# Cloud Mail Kesiv 部署维护分支
+
+基于 [maillab/cloud-mail](https://github.com/maillab/cloud-mail) 的 Cloudflare 邮箱部署记录与维护工具。保留上游 MIT 许可证和 Git 历史；本次生产基线为 `f406890`。
+
+前端和邮件业务源码保持该上游版本。本分支新增受保护的初始化入口、部署模板、诊断工具、普通用户烟雾测试与运维文档，默认角色和 Email Routing 的调整保存在生产服务配置中。
+
+- [具体部署步骤](deployment/GUIDE.md)：环境、资源、密钥、数据库初始化、Resend、Catch-all、旧转发邮箱接入、升级。
+- [实际改了什么](deployment/CHANGES.md)：上游源码、部署包装和持久化设置的差异。
+- [遇到的问题和排查过程](deployment/TROUBLESHOOTING.md)：401/10000、普通用户发信拒绝、Catch-all、单地址投递、Tail 与本地运行限制。
+- [真实测试结果与复现方法](deployment/TESTING.md)。
+- [未解决问题与未来计划](deployment/ROADMAP.md) · [Issues](https://github.com/ponyletter/cloud-mail-kesiv/issues)。
+
+公开仓库不包含生产 Token、API Key、密码、用户列表、原始日志或生产资源配置。`deployment/` 只提交明确允许的模板和工具。验证工作流模板保存在 `.github/reference/`；当前 GitHub 凭据缺少 `workflow` 权限，尚未启用 Actions。生产继续手动部署。
+
+以下保留上游项目介绍。
+
+---
+
 <p align="center">
     <img src="doc/demo/logo.png" width="80px" />
     <h1 align="center">Cloud Mail</h1>
